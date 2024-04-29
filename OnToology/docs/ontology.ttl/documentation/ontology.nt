@@ -1,0 +1,798 @@
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology is designed to structure and relate information obtained from customer reviews of Qatar Airways and Ryanair airlines, facilitating the analysis and comparison of flight services through different parameters such as comfort, cabin service, and general customer satisfaction. customer." .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ObjectProperty
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ObjectProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ObjectProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a review to the services evaluated" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ObjectProperty> <http://www.w3.org/2000/01/rdf-schema#label> "objectProperty" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#fliesFromTo
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#fliesFromTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#fliesFromTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#fliesFromTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a flight review with its departure and destination airports" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#fliesFromTo> <http://www.w3.org/2000/01/rdf-schema#label> "filesFromTo" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a flight review with its departure and destination airports" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "hasAuthor" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a review with specific flight details" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails> <http://www.w3.org/2000/01/rdf-schema#label> "hasFlightDetails" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a review to the ratings it includes" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "hasRating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendation
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a review to its recommendation status" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendation> <http://www.w3.org/2000/01/rdf-schema#label> "hasRecommendation" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a review to the type of seat described in the review" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat> <http://www.w3.org/2000/01/rdf-schema#label> "hasSeat" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#offersAmenities
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#offersAmenities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#offersAmenities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#offersAmenities> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a review with the amenities discussed within it" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#offersAmenities> <http://www.w3.org/2000/01/rdf-schema#label> "offersAmenities" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "operate flying" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "operate by" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a review with the aircraft used for the flight" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft> <http://www.w3.org/2000/01/rdf-schema#label> "usesAircraft" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the author of the review" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName> <http://www.w3.org/2000/01/rdf-schema#label> "authorName" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#comfortRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#comfortRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#comfortRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#comfortRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#comfortRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The rating for seat comfort provided in the review" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#comfortRating> <http://www.w3.org/2000/01/rdf-schema#label> "comfortRating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of the flight being reviewed" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate> <http://www.w3.org/2000/01/rdf-schema#label> "flightDate" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating> <http://www.w3.org/2000/01/rdf-schema#comment> "ha scabin staf f service rating" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating> <http://www.w3.org/2000/01/rdf-schema#label> "hasCabinStaffServiceRating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendationStatus
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendationStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "recommendation status data" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendationStatus> <http://www.w3.org/2000/01/rdf-schema#label> "hasRecommendationStatus" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "he number when the id was published" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> <http://www.w3.org/2000/01/rdf-schema#label> "idNumber" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The overall rating given in the review" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> <http://www.w3.org/2000/01/rdf-schema#label> "overallRating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#recommendationStatus
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#recommendationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#recommendationStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#recommendationStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#recommendationStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the review recommends the airline service" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#recommendationStatus> <http://www.w3.org/2000/01/rdf-schema#label> "recommendationStatus" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate> <http://www.w3.org/2000/01/rdf-schema#comment> "he date when the id was published" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate> <http://www.w3.org/2000/01/rdf-schema#label> "idDate" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails> <http://www.w3.org/2000/01/rdf-schema#comment> "Details about the aircraft used for the flight, such as the type and model" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails> <http://www.w3.org/2000/01/rdf-schema#label> "Aircraft Details" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftType
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of aircraft used, such as Boeing 787 or Airbus A320" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftType> <http://www.w3.org/2000/01/rdf-schema#label> "Aircraft Type" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities> <http://www.w3.org/2000/01/rdf-schema#comment> "Additional comfort and convenience features offered to passengers during the flight" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities> <http://www.w3.org/2000/01/rdf-schema#label> "Amenities" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AmenityAvailability
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AmenityAvailability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AmenityAvailability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AmenityAvailability> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies whether specific amenities are available on the flight, such as extra legroom or in-flight meals" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AmenityAvailability> <http://www.w3.org/2000/01/rdf-schema#label> "Amenity Availability" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author> <http://www.w3.org/2000/01/rdf-schema#comment> "The person who wrote the review. Includes name and country" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author> <http://www.w3.org/2000/01/rdf-schema#label> "Author" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorCountry
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorCountry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorCountry> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "he country where the author resides or from which they wrote the review" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorCountry> <http://www.w3.org/2000/01/rdf-schema#label> "Author Country" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the author of the review" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName> <http://www.w3.org/2000/01/rdf-schema#label> "Author Name" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandling
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandling> <http://www.w3.org/2000/01/rdf-schema#comment> "The process and efficiency of how an airline handles passenger luggage, from check-in to collection at the destination" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandling> <http://www.w3.org/2000/01/rdf-schema#label> "Baggage Handling" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandlingRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandlingRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandlingRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandling> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandlingRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating that evaluates the effectiveness and care of the airline's baggage handling services" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandlingRating> <http://www.w3.org/2000/01/rdf-schema#label> "Baggage Handling Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating for the service provided by the flight's cabin crew, often out of 5 stars" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating> <http://www.w3.org/2000/01/rdf-schema#label> "Cabin Staff Service Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInEfficiency
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInEfficiency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInEfficiency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInProcess> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInEfficiency> <http://www.w3.org/2000/01/rdf-schema#comment> "A measure of how quickly and effectively the airline handles check-in procedures" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInEfficiency> <http://www.w3.org/2000/01/rdf-schema#label> "Check-in Efficiency" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInProcess
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "he procedures involved in checking in for a flight at the airport, which can significantly impact passenger satisfaction" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInProcess> <http://www.w3.org/2000/01/rdf-schema#label> "Check-in Process" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company> <http://www.w3.org/2000/01/rdf-schema#comment> "A business that offers air transportation for both passengers." .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company> <http://www.w3.org/2000/01/rdf-schema#label> "Company" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerService
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerService> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the overall quality of interaction between the airline staff and the passengers, both on the ground and in-flight" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerService> <http://www.w3.org/2000/01/rdf-schema#label> "Customer Service" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerServiceRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerServiceRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerServiceRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerService> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerServiceRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating that assesses the quality of customer service provided by the airline" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerServiceRating> <http://www.w3.org/2000/01/rdf-schema#label> "Customer Service Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DatePublished
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DatePublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DatePublished> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DatePublished> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which the review was published, formatted as YYYY-MM-DD" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DatePublished> <http://www.w3.org/2000/01/rdf-schema#label> "Date Published" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport> <http://www.w3.org/2000/01/rdf-schema#comment> "The airport at which the flight arrived" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport> <http://www.w3.org/2000/01/rdf-schema#label> "Destination Airport" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalConcerns
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalConcerns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalConcerns> <http://www.w3.org/2000/01/rdf-schema#comment> "Issues related to the environmental impact of airline operations, including emissions and sustainability practices" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalConcerns> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental Concerns" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalInitiativesRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalInitiativesRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalInitiativesRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalConcerns> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalInitiativesRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating that evaluates the airline's efforts and practices in reducing its environmental footprint" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalInitiativesRating> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental Initiatives Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific date on which the flight occurred" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate> <http://www.w3.org/2000/01/rdf-schema#label> "Flight Date" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the flight, including the date and the airports of origin and destination" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails> <http://www.w3.org/2000/01/rdf-schema#label> "Flight Details" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the punctuality of the airline's flights, including departures and arrivals" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness> <http://www.w3.org/2000/01/rdf-schema#label> "Flight Timeliness" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating for the service quality at the airport, such as check-in and baggage handling." .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating> <http://www.w3.org/2000/01/rdf-schema#label> "Ground Service Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#HighlyRecommended
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#HighlyRecommended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#HighlyRecommended> <http://www.w3.org/2000/01/rdf-schema#comment> "If a flight receives an overall rating greater than 4 and a cabin service rating also greater than 4, then it is considered highly recommended" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#HighlyRecommended> <http://www.w3.org/2000/01/rdf-schema#label> "HighlyRecommended" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid1 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid2 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "9999"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier for each review, typically a numeric or alphanumeric string" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/idNumber" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightEntertainmentRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightEntertainmentRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightEntertainmentRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightEntertainmentRating> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightEntertainmentRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating evaluating the quality and variety of entertainment options available during the flight" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightEntertainmentRating> <http://www.w3.org/2000/01/rdf-schema#label> "Inflight Entertainment Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices> <http://www.w3.org/2000/01/rdf-schema#comment> "Services provided during the flight, including entertainment and connectivity options" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices> <http://www.w3.org/2000/01/rdf-schema#label> "Inflight Services" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LowRecomended
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LowRecomended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LowRecomended> <http://www.w3.org/2000/01/rdf-schema#comment> "minor than 2" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LowRecomended> <http://www.w3.org/2000/01/rdf-schema#label> "LowRecomended" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgram
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgram> <http://www.w3.org/2000/01/rdf-schema#comment> "A program offered by an airline to reward passengers with benefits for frequent travel" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgram> <http://www.w3.org/2000/01/rdf-schema#label> "Loyalty Program" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgramBenefits
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgramBenefits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgramBenefits> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgram> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgramBenefits> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific benefits provided to members of the airline's loyalty program, such as upgrades, extra baggage allowance, or priority boarding" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgramBenefits> <http://www.w3.org/2000/01/rdf-schema#label> "Loyalty Program Benefits" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaxRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaxRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaxRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaxRating> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaxRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum possible rating that can be given" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaxRating> <http://www.w3.org/2000/01/rdf-schema#label> "Max Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MiddleRecomended
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MiddleRecomended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MiddleRecomended> <http://www.w3.org/2000/01/rdf-schema#comment> "value between 2 and 4" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MiddleRecomended> <http://www.w3.org/2000/01/rdf-schema#label> "MiddleRecomended" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OnTimePerformance
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OnTimePerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OnTimePerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OnTimePerformance> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating that measures how often the airline's flights operate on schedule" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OnTimePerformance> <http://www.w3.org/2000/01/rdf-schema#label> "On-time Performance" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport> <http://www.w3.org/2000/01/rdf-schema#comment> "The airport from which the flight departed" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport> <http://www.w3.org/2000/01/rdf-schema#label> "Origin Airport" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A general rating given by the reviewer to the airline" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating> <http://www.w3.org/2000/01/rdf-schema#label> "Overall Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid3 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid4 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "10"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains all ratings associated with the review, including overall, service, and specific amenities" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings> <http://www.w3.org/2000/01/rdf-schema#label> "Ratings" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the review author recommends the airline service to other potential customers" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#RecommendationStatus
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#RecommendationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#RecommendationStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#RecommendationStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean value indicating if the airline is recommended by the reviewer" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#RecommendationStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation Status" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewBody
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewBody> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewBody> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewBody> <http://www.w3.org/2000/01/rdf-schema#comment> "The main textual content of the review" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewBody> <http://www.w3.org/2000/01/rdf-schema#label> "Review Body" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the main textual content of the review, including the title and body" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent> <http://www.w3.org/2000/01/rdf-schema#label> "Review Content" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The title of the review" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle> <http://www.w3.org/2000/01/rdf-schema#label> "Review Title" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Safety
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Safety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Safety> <http://www.w3.org/2000/01/rdf-schema#comment> "Aspects of airline operations that concern the safety and security of passengers and crew during flights" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Safety> <http://www.w3.org/2000/01/rdf-schema#label> "Safety" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SafetyMeasuresRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SafetyMeasuresRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SafetyMeasuresRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Safety> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SafetyMeasuresRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating that assesses the effectiveness of the safety measures and protocols implemented by the airline" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SafetyMeasuresRating> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Measures Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatComfortRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatComfortRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatComfortRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatComfortRating> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatComfortRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating of the comfort of the seat" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatComfortRating> <http://www.w3.org/2000/01/rdf-schema#label> "Seat Comfort Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails> <http://www.w3.org/2000/01/rdf-schema#comment> "Details about the seating on the flight, including type and comfort rating" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails> <http://www.w3.org/2000/01/rdf-schema#label> "Seat Details" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of seat chosen on the flight" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType> <http://www.w3.org/2000/01/rdf-schema#label> "Seat Type" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings> <http://www.w3.org/2000/01/rdf-schema#comment> "Ratings related to specific services provided during the flight, including cabin staff and ground service" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings> <http://www.w3.org/2000/01/rdf-schema#label> "Service Ratings" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#TripVerified
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#TripVerified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#TripVerified> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#TripVerified> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#TripVerified> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the travel review has been verified by the airline or a third party as a genuine experience" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#TripVerified> <http://www.w3.org/2000/01/rdf-schema#label> "Trip Verified" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueAssessment
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Assesses the value for money of the flight experience" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Value Assessment" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueForMoneyRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueForMoneyRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueForMoneyRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueAssessment> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueForMoneyRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Rating that evaluates the overall value for money of the flight" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueForMoneyRating> <http://www.w3.org/2000/01/rdf-schema#label> "Value For Money Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the verification status of the review, determining if it reflects a verified travel experience" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification> <http://www.w3.org/2000/01/rdf-schema#label> "Verification" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified> <http://www.w3.org/2000/01/rdf-schema#comment> "A status that shows whether the review has been authenticated as coming from an actual passenger" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified> <http://www.w3.org/2000/01/rdf-schema#label> "Verified" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating for the quality of food and beverages offered during the flight" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating> <http://www.w3.org/2000/01/rdf-schema#label> "Food & Beverages Rating" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating assessing the availability and quality of WiFi and other connectivity services on board" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating> <http://www.w3.org/2000/01/rdf-schema#label> "Wifi & Connectivity Rating" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900> <http://www.w3.org/2000/01/rdf-schema#comment> "This instance represents the Boeing 737 Dreamliner, a long-haul, mid-size widebody, twin-engine jet airliner. Known for its fuel efficiency and advanced technology, it is designed to provide airlines with better efficiency and passengers with a more comfortable flying experience. It features innovations such as electrical flight systems, composite materials, and larger windows" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900> <http://www.w3.org/2000/01/rdf-schema#label> "Boing737_900" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Boeing_737_Next_Generation" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Economy class individual" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass> <http://www.w3.org/2000/01/rdf-schema#label> "Economy Class" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ID5235
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ID5235> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ID5235> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ID5235> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ID5235> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber> "ID5235" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ID5235> <http://www.w3.org/2000/01/rdf-schema#comment> "ID5283 is the unique identifier used in the database to locate user reviews" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ID5235> <http://www.w3.org/2000/01/rdf-schema#label> "ID5235" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe> <http://www.w3.org/2000/01/rdf-schema#comment> "A frequent Economy Class traveler flying from Tokyo to London Heathrow via Doha." .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe> <http://www.w3.org/2000/01/rdf-schema#label> "Mary Le" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Qatar_Airways
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Qatar_Airways> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Qatar_Airways> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Qatar_Airways> <http://www.w3.org/2000/01/rdf-schema#comment> "Qatar Airways is the national airline of the State of Qatar and one of the leading airlines in the world, known for its high levels of service excellence. Here are some key points about Qatar Airways:" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Qatar_Airways> <http://www.w3.org/2000/01/rdf-schema#label> "Qatar Airways" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Qatar_Airways> <http://www.w3.org/2000/01/rdf-schema#sameAs> "http://dbpedia.org/resource/Qatar_Airways" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ryanair
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ryanair> <http://www.w3.org/2000/01/rdf-schema#comment> "Ryanair company" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ryanair> <http://www.w3.org/2000/01/rdf-schema#label> "Ryanair" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ryanair> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Ryanair" .
+# 
+# http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0> .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "Value of rating by author" .
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0> <http://www.w3.org/2000/01/rdf-schema#label> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid5 <http://www.w3.org/2002/07/owl#members> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid9 <http://www.w3.org/2002/07/owl#members> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#serviceRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#comment> "middle recommended when ovarall value greather than 2 and less than 4" .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#label> "MiddleRecommended" .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid13 <http://www.w3.org/2003/11/swrl#body> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2003/11/swrl#arguments> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#serviceRating> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+<http://www.w3.org/2003/11/swrlb#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2003/11/swrl#arguments> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#serviceRating> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+<http://www.w3.org/2003/11/swrlb#greaterThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#serviceRating> .
+_:genid23 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid23 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/2003/11/swrl#arguments> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#rating> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2003/11/swrl#arguments> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#rating> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
+_:genid33 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#rating> .
+_:genid33 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid33 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
+_:genid35 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid35 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid13 <http://www.w3.org/2003/11/swrl#head> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
+_:genid37 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid37 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MiddleRecomended> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid38 <http://www.w3.org/2000/01/rdf-schema#comment> "Low recommended when ovarall value less  than 2" .
+_:genid38 <http://www.w3.org/2000/01/rdf-schema#label> "LowRecomended" .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid38 <http://www.w3.org/2003/11/swrl#body> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid40 .
+_:genid40 <http://www.w3.org/2003/11/swrl#arguments> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#serviceRating> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid44 .
+_:genid44 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#serviceRating> .
+_:genid44 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid44 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid46 .
+_:genid46 <http://www.w3.org/2003/11/swrl#arguments> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#rating> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid50 .
+_:genid50 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#rating> .
+_:genid50 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid50 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid52 .
+_:genid52 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid52 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid38 <http://www.w3.org/2003/11/swrl#head> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid54 .
+_:genid54 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid54 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LowRecomended> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid55 <http://www.w3.org/2000/01/rdf-schema#comment> "Highly recommended when ovarall value greather than 4" .
+_:genid55 <http://www.w3.org/2000/01/rdf-schema#label> "HighlyRecommended" .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid55 <http://www.w3.org/2003/11/swrl#body> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid57 .
+_:genid57 <http://www.w3.org/2003/11/swrl#arguments> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#serviceRating> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid61 .
+_:genid61 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#serviceRating> .
+_:genid61 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid61 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid63 .
+_:genid63 <http://www.w3.org/2003/11/swrl#arguments> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#rating> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid67 .
+_:genid67 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#rating> .
+_:genid67 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid67 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid69 .
+_:genid69 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid69 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid55 <http://www.w3.org/2003/11/swrl#head> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid71 .
+_:genid71 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid71 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#HighlyRecommended> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,1075 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#rational"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "9999"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#rational"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#rational"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "10"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#rational"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating"
+    }, {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating"
+    }, {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport"
+    }, {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate"
+    }, {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport"
+    } ]
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This ontology is designed to structure and relate information obtained from customer reviews of Qatar Airways and Ryanair airlines, facilitating the analysis and comparison of flight services through different parameters such as comfort, cabin service, and general customer satisfaction. customer."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Value of rating by author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Details about the aircraft used for the flight, such as the type and model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aircraft Details"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of aircraft used, such as Boeing 787 or Airbus A320"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aircraft Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Additional comfort and convenience features offered to passengers during the flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Amenities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AmenityAvailability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies whether specific amenities are available on the flight, such as extra legroom or in-flight meals"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Amenity Availability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The person who wrote the review. Includes name and country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Author"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorCountry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "he country where the author resides or from which they wrote the review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Author Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the author of the review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Author Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The process and efficiency of how an airline handles passenger luggage, from check-in to collection at the destination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Baggage Handling"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandlingRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating that evaluates the effectiveness and care of the airline's baggage handling services"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Baggage Handling Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandling"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This instance represents the Boeing 737 Dreamliner, a long-haul, mid-size widebody, twin-engine jet airliner. Known for its fuel efficiency and advanced technology, it is designed to provide airlines with better efficiency and passengers with a more comfortable flying experience. It features innovations such as electrical flight systems, composite materials, and larger windows"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boing737_900"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "https://dbpedia.org/page/Boeing_737_Next_Generation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating for the service provided by the flight's cabin crew, often out of 5 stars"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cabin Staff Service Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInEfficiency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A measure of how quickly and effectively the airline handles check-in procedures"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Check-in Efficiency"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInProcess"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "he procedures involved in checking in for a flight at the airport, which can significantly impact passenger satisfaction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Check-in Process"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A business that offers air transportation for both passengers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Company"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the overall quality of interaction between the airline staff and the passengers, both on the ground and in-flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Customer Service"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerServiceRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating that assesses the quality of customer service provided by the airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Customer Service Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerService"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DatePublished",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The date on which the review was published, formatted as YYYY-MM-DD"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Date Published"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The airport at which the flight arrived"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Destination Airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Economy class individual"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Economy Class"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalConcerns",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Issues related to the environmental impact of airline operations, including emissions and sustainability practices"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Environmental Concerns"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalInitiativesRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating that evaluates the airline's efforts and practices in reducing its environmental footprint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Environmental Initiatives Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalConcerns"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The specific date on which the flight occurred"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flight Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Information about the flight, including the date and the airports of origin and destination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flight Details"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the punctuality of the airline's flights, including departures and arrivals"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flight Timeliness"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating for the quality of food and beverages offered during the flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Food & Beverages Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating for the service quality at the airport, such as check-in and baggage handling."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ground Service Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#HighlyRecommended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If a flight receives an overall rating greater than 4 and a cabin service rating also greater than 4, then it is considered highly recommended"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HighlyRecommended"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ID5235",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe"
+  } ],
+  "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber" : [ {
+    "@value" : "ID5235"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "ID5283 is the unique identifier used in the database to locate user reviews"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ID5235"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A unique identifier for each review, typically a numeric or alphanumeric string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "https://dbpedia.org/ontology/idNumber"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightEntertainmentRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating evaluating the quality and variety of entertainment options available during the flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Inflight Entertainment Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Services provided during the flight, including entertainment and connectivity options"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Inflight Services"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LowRecomended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "minor than 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "LowRecomended"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgram",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A program offered by an airline to reward passengers with benefits for frequent travel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Loyalty Program"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgramBenefits",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specific benefits provided to members of the airline's loyalty program, such as upgrades, extra baggage allowance, or priority boarding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Loyalty Program Benefits"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgram"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A frequent Economy Class traveler flying from Tokyo to London Heathrow via Doha."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mary Le"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaxRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The maximum possible rating that can be given"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Max Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MiddleRecomended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "value between 2 and 4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MiddleRecomended"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ObjectProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a review to the services evaluated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "objectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OnTimePerformance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating that measures how often the airline's flights operate on schedule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "On-time Performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The airport from which the flight departed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Origin Airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A general rating given by the reviewer to the airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Overall Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Qatar_Airways",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Qatar Airways is the national airline of the State of Qatar and one of the leading airlines in the world, known for its high levels of service excellence. Here are some key points about Qatar Airways:"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Qatar Airways"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "http://dbpedia.org/resource/Qatar_Airways"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Contains all ratings associated with the review, including overall, service, and specific amenities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ratings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates whether the review author recommends the airline service to other potential customers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Recommendation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#RecommendationStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A boolean value indicating if the airline is recommended by the reviewer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Recommendation Status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewBody",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The main textual content of the review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Review Body"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Contains the main textual content of the review, including the title and body"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Review Content"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The title of the review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Review Title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ryanair",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ryanair company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ryanair"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "https://dbpedia.org/page/Ryanair"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Safety",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Aspects of airline operations that concern the safety and security of passengers and crew during flights"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Safety"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SafetyMeasuresRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating that assesses the effectiveness of the safety measures and protocols implemented by the airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Safety Measures Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Safety"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatComfortRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating of the comfort of the seat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Seat Comfort Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Details about the seating on the flight, including type and comfort rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Seat Details"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of seat chosen on the flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Seat Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ratings related to specific services provided during the flight, including cabin staff and ground service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Service Ratings"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#TripVerified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates whether the travel review has been verified by the airline or a third party as a genuine experience"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Trip Verified"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Assesses the value for money of the flight experience"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Value Assessment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueForMoneyRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Rating that evaluates the overall value for money of the flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Value For Money Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueAssessment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the verification status of the review, determining if it reflects a verified travel experience"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Verification"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A status that shows whether the review has been authenticated as coming from an actual passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Verified"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rating assessing the availability and quality of WiFi and other connectivity services on board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Wifi & Connectivity Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the author of the review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "authorName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#comfortRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The rating for seat comfort provided in the review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "comfortRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#fliesFromTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Connects a flight review with its departure and destination airports"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "filesFromTo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The date of the flight being reviewed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "flightDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Connects a flight review with its departure and destination airports"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasAuthor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "ha scabin staf f service rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasCabinStaffServiceRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Associates a review with specific flight details"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasFlightDetails"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Connects a review to the ratings it includes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a review to its recommendation status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasRecommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendationStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "recommendation status data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasRecommendationStatus"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Connects a review to the type of seat described in the review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasSeat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "he number when the id was published"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "idNumber"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#offersAmenities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Associates a review with the amenities discussed within it"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "offersAmenities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "operate flying"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "operate by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The overall rating given in the review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "overallRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#recommendationStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates whether the review recommends the airline service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recommendationStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "he date when the id was published"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "idDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Associates a review with the aircraft used for the flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "usesAircraft"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]
