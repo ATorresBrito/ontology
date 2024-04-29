@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "Airline_Reviews_Ontology:Verified" "Airline_Reviews_Ontology:CustomerService" "Airline_Reviews_Ontology:ReviewBody" "Airline_Reviews_Ontology:GroundServiceRating" "Airline_Reviews_Ontology:FlightDate" "Airline_Reviews_Ontology:FlightDetails" "Airline_Reviews_Ontology:ValueAssessment" "Airline_Reviews_Ontology:ServiceRatings" "Airline_Reviews_Ontology:AmenityAvailability" "Airline_Reviews_Ontology:AircraftType" "Airline_Reviews_Ontology:SeatDetails" "Airline_Reviews_Ontology:LoyaltyProgram" "Airline_Reviews_Ontology:OnTimePerformance" "Airline_Reviews_Ontology:OriginAirport" "Airline_Reviews_Ontology:SeatComfortRating" "Airline_Reviews_Ontology:OverallRating" "Airline_Reviews_Ontology:SeatType" "Airline_Reviews_Ontology:CustomerServiceRating" "Airline_Reviews_Ontology:SafetyMeasuresRating" "Airline_Reviews_Ontology:FlightTimeliness" "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating" "Airline_Reviews_Ontology:EnvironmentalInitiativesRating" "Airline_Reviews_Ontology:Identifier" "Airline_Reviews_Ontology:BaggageHandlingRating" "Airline_Reviews_Ontology:DestinationAirport" "Airline_Reviews_Ontology:CheckInProcess" "Airline_Reviews_Ontology:ReviewContent" "Airline_Reviews_Ontology:Recommendation" "Airline_Reviews_Ontology:ReviewTitle" "Airline_Reviews_Ontology:LoyaltyProgramBenefits" "Airline_Reviews_Ontology:Amenities" "Airline_Reviews_Ontology:DatePublished" "Airline_Reviews_Ontology:InflightServices" "Airline_Reviews_Ontology:Ratings" "Airline_Reviews_Ontology:Safety" "Airline_Reviews_Ontology:CabinStaffServiceRating" "Airline_Reviews_Ontology:MaxRating" "Airline_Reviews_Ontology:Author" "Airline_Reviews_Ontology:InflightEntertainmentRating" "Airline_Reviews_Ontology:TripVerified" "Airline_Reviews_Ontology:ValueForMoneyRating" "Airline_Reviews_Ontology:AircraftDetails" "Airline_Reviews_Ontology:Verification" "Airline_Reviews_Ontology:RecommendationStatus" "Airline_Reviews_Ontology:CheckInEfficiency" "Airline_Reviews_Ontology:AuthorCountry" "Airline_Reviews_Ontology:EnvironmentalConcerns" "Airline_Reviews_Ontology:AuthorName" "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating" "Airline_Reviews_Ontology:BaggageHandling" ; /*classes style*/
+	"http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating" -> "Airline_Reviews_Ontology:ServiceRatings" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:SeatType" -> "Airline_Reviews_Ontology:SeatDetails" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:ReviewBody" -> "Airline_Reviews_Ontology:ReviewContent" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:SeatComfortRating" -> "Airline_Reviews_Ontology:SeatDetails" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:AircraftType" -> "Airline_Reviews_Ontology:AircraftDetails" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:BaggageHandlingRating" -> "Airline_Reviews_Ontology:BaggageHandling" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:GroundServiceRating" -> "Airline_Reviews_Ontology:ServiceRatings" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:ValueForMoneyRating" -> "Airline_Reviews_Ontology:ValueAssessment" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:EnvironmentalInitiativesRating" -> "Airline_Reviews_Ontology:EnvironmentalConcerns" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:FlightDate" -> "Airline_Reviews_Ontology:FlightDetails" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:CheckInEfficiency" -> "Airline_Reviews_Ontology:CheckInProcess" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:OnTimePerformance" -> "Airline_Reviews_Ontology:FlightTimeliness" [ label = "rdfs:subClassOf" ];
+	"http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating" -> "Airline_Reviews_Ontology:InflightServices" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:AuthorCountry" -> "Airline_Reviews_Ontology:Author" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:Verified" -> "Airline_Reviews_Ontology:Verification" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:TripVerified" -> "Airline_Reviews_Ontology:Verification" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:OriginAirport" -> "Airline_Reviews_Ontology:FlightDetails" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:DatePublished" -> "Airline_Reviews_Ontology:Identifier" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:ReviewTitle" -> "Airline_Reviews_Ontology:ReviewContent" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:MaxRating" -> "Airline_Reviews_Ontology:Ratings" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:CabinStaffServiceRating" -> "Airline_Reviews_Ontology:ServiceRatings" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:AmenityAvailability" -> "Airline_Reviews_Ontology:Amenities" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:LoyaltyProgramBenefits" -> "Airline_Reviews_Ontology:LoyaltyProgram" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:DestinationAirport" -> "Airline_Reviews_Ontology:FlightDetails" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:CustomerServiceRating" -> "Airline_Reviews_Ontology:CustomerService" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:InflightEntertainmentRating" -> "Airline_Reviews_Ontology:InflightServices" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:SafetyMeasuresRating" -> "Airline_Reviews_Ontology:Safety" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:RecommendationStatus" -> "Airline_Reviews_Ontology:Recommendation" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:OverallRating" -> "Airline_Reviews_Ontology:Ratings" [ label = "rdfs:subClassOf" ];
+	"Airline_Reviews_Ontology:AuthorName" -> "Airline_Reviews_Ontology:Author" [ label = "rdfs:subClassOf" ];
+
+}
