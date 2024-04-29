@@ -1,0 +1,250 @@
+{
+  "@context" : {
+    "Verified" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified"
+    },
+    "Verification" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification"
+    },
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating",
+      "@type" : "@id"
+    },
+    "ValueForMoneyRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueForMoneyRating"
+    },
+    "Recommendation" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation"
+    },
+    "MaxRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaxRating"
+    },
+    "ReviewBody" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewBody"
+    },
+    "MiddleRecomended" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MiddleRecomended"
+    },
+    "usesAircraft" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft",
+      "@type" : "@id"
+    },
+    "comfortRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#comfortRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "idNumber" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRecommendation" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendation",
+      "@type" : "@id"
+    },
+    "EnvironmentalInitiativesRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalInitiativesRating"
+    },
+    "DatePublished" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DatePublished"
+    },
+    "reviewDate" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasSeat" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat",
+      "@type" : "@id"
+    },
+    "BaggageHandling" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandling"
+    },
+    "RecommendationStatus" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#RecommendationStatus"
+    },
+    "OverallRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating"
+    },
+    "HighlyRecommended" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#HighlyRecommended"
+    },
+    "operatedBy" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy",
+      "@type" : "@id"
+    },
+    "AircraftType" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftType"
+    },
+    "FlightTimeliness" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness"
+    },
+    "EnvironmentalConcerns" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalConcerns"
+    },
+    "CustomerService" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerService"
+    },
+    "offersAmenities" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#offersAmenities",
+      "@type" : "@id"
+    },
+    "overallRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Ratings" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings"
+    },
+    "CabinStaffServiceRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating"
+    },
+    "SafetyMeasuresRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SafetyMeasuresRating"
+    },
+    "AuthorCountry" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorCountry"
+    },
+    "Amenities" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities"
+    },
+    "Safety" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Safety"
+    },
+    "flightDate" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "CheckInProcess" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInProcess"
+    },
+    "AircraftDetails" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails"
+    },
+    "hasAuthor" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor",
+      "@type" : "@id"
+    },
+    "OriginAirport" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport"
+    },
+    "Company" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company"
+    },
+    "OnTimePerformance" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OnTimePerformance"
+    },
+    "hasCabinStaffServiceRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "BeveragesRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating"
+    },
+    "ObjectProperty" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ObjectProperty",
+      "@type" : "@id"
+    },
+    "ServiceRatings" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings"
+    },
+    "FlightDate" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate"
+    },
+    "GroundServiceRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating"
+    },
+    "hasFlightDetails" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails",
+      "@type" : "@id"
+    },
+    "SeatComfortRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatComfortRating"
+    },
+    "TripVerified" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#TripVerified"
+    },
+    "LowRecomended" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LowRecomended"
+    },
+    "fliesFromTo" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#fliesFromTo",
+      "@type" : "@id"
+    },
+    "ValueAssessment" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueAssessment"
+    },
+    "recommendationStatus" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#recommendationStatus",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasRecommendationStatus" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendationStatus"
+    },
+    "Author" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author"
+    },
+    "LoyaltyProgramBenefits" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgramBenefits"
+    },
+    "SeatDetails" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails"
+    },
+    "FlightDetails" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails"
+    },
+    "InflightServices" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices"
+    },
+    "CustomerServiceRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerServiceRating"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "InflightEntertainmentRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightEntertainmentRating"
+    },
+    "DestinationAirport" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport"
+    },
+    "LoyaltyProgram" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgram"
+    },
+    "authorName" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "BaggageHandlingRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandlingRating"
+    },
+    "ConnectivityRating" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating"
+    },
+    "AuthorName" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName"
+    },
+    "AmenityAvailability" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AmenityAvailability"
+    },
+    "Identifier" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier"
+    },
+    "SeatType" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType"
+    },
+    "ReviewContent" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent"
+    },
+    "ReviewTitle" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle"
+    },
+    "CheckInEfficiency" : {
+      "@id" : "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInEfficiency"
+    }
+  }
+}
