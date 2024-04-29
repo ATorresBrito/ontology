@@ -1,0 +1,52 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "Airline_Reviews_Ontology:Verified" "Airline_Reviews_Ontology:ReviewBody" "Airline_Reviews_Ontology:GroundServiceRating" "Airline_Reviews_Ontology:FlightDate" "Airline_Reviews_Ontology:FlightDetails" "Airline_Reviews_Ontology:ServiceRatings" "Airline_Reviews_Ontology:SeatDetails" "Airline_Reviews_Ontology:OriginAirport" "Airline_Reviews_Ontology:SeatComfortRating" "Airline_Reviews_Ontology:OverallRating" "Airline_Reviews_Ontology:SeatType" "Airline_Reviews_Ontology:FlightTimeliness" "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating" "Airline_Reviews_Ontology:Identifier" "Airline_Reviews_Ontology:DestinationAirport" "Airline_Reviews_Ontology:Recommendation" "Airline_Reviews_Ontology:ReviewTitle" "Airline_Reviews_Ontology:Amenities" "Airline_Reviews_Ontology:Ratings" "Airline_Reviews_Ontology:CabinStaffServiceRating" "Airline_Reviews_Ontology:MaxRating" "Airline_Reviews_Ontology:Author" "Airline_Reviews_Ontology:InflightEntertainmentRating" "Airline_Reviews_Ontology:TripVerified" "Airline_Reviews_Ontology:AircraftDetails" "Airline_Reviews_Ontology:AuthorCountry" "Airline_Reviews_Ontology:AuthorName" "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating" ; /*classes style*/
+	"NULL" -> "b172887:18f2b810688:-7ff5" [ label = "rdf:rest" ];
+	"NULL" -> "Airline_Reviews_Ontology:CabinStaffServiceRating" [ label = "rdf:first" ];
+	"NULL" -> "b172887:18f2b810688:-7ff2" [ label = "rdf:rest" ];
+	"NULL" -> "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating" [ label = "rdf:first" ];
+	"NULL" -> "Airline_Reviews_Ontology:OriginAirport" [ label = "rdf:first" ];
+	"NULL" -> "owl:rational" [ label = "owl:onDataRange" ];
+	"NULL" -> "Airline_Reviews_Ontology:FlightDate" [ label = "rdf:first" ];
+	"NULL" -> "Airline_Reviews_Ontology:GroundServiceRating" [ label = "rdf:first" ];
+	"NULL" -> "b172887:18f2b810688:-7ff1" [ label = "rdf:rest" ];
+	"NULL" -> "b172887:18f2b810688:-7ff3" [ label = "owl:members" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "Airline_Reviews_Ontology:overallRating" [ label = "owl:onProperty" ];
+	"NULL" -> "b172887:18f2b810688:-7ff6" [ label = "rdf:rest" ];
+	"NULL" -> "Airline_Reviews_Ontology:idNumber" [ label = "owl:onProperty" ];
+	"NULL" -> "Airline_Reviews_Ontology:DestinationAirport" [ label = "rdf:first" ];
+	"NULL" -> "b172887:18f2b810688:-7ff7" [ label = "owl:members" ];
+	"Airline_Reviews_Ontology:ReviewBody" -> "Airline_Reviews_Ontology:ReviewTitle" [ label = "owl:disjointWith" ];
+	"Airline_Reviews_Ontology:SeatComfortRating" -> "Airline_Reviews_Ontology:SeatType" [ label = "owl:disjointWith" ];
+	"Airline_Reviews_Ontology:Boing737_900" -> "Airline_Reviews_Ontology:Boing737_900" [ label = "Airline_Reviews_Ontology:usesAircraft" ];
+	"Airline_Reviews_Ontology:authorName" -> "Airline_Reviews_Ontology:idNumber" [ label = "rdfs:subPropertyOf" ];
+	"Airline_Reviews_Ontology:AuthorCountry" -> "Airline_Reviews_Ontology:AuthorName" [ label = "owl:disjointWith" ];
+	"Airline_Reviews_Ontology:ID5235" -> "Airline_Reviews_Ontology:MaryLe" [ label = "Airline_Reviews_Ontology:hasAuthor" ];
+	"Airline_Reviews_Ontology:TripVerified" -> "Airline_Reviews_Ontology:Verified" [ label = "owl:disjointWith" ];
+	"Airline_Reviews_Ontology:MaxRating" -> "Airline_Reviews_Ontology:OverallRating" [ label = "owl:disjointWith" ];
+	"http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0" -> "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0" [ label = "Airline_Reviews_Ontology:hasRating" ];
+	"Airline_Reviews_Ontology:MaryLe" -> "Airline_Reviews_Ontology:Boing737_900" [ label = "Airline_Reviews_Ontology:hasFlightDetails" ];
+	"Airline_Reviews_Ontology:EconomyClass" -> "Airline_Reviews_Ontology:EconomyClass" [ label = "Airline_Reviews_Ontology:hasSeat" ];
+	"Airline_Reviews_Ontology:InflightEntertainmentRating" -> "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating" [ label = "owl:disjointWith" ];
+	"Airline_Reviews_Ontology:AircraftDetails" -> "Airline_Reviews_Ontology:SeatDetails" [ label = "Airline_Reviews_Ontology:hasSeat" ];
+	"Airline_Reviews_Ontology:Identifier" -> "xsd:boolean" [ label = "Airline_Reviews_Ontology:recommendationStatus" ];
+	"Airline_Reviews_Ontology:FlightTimeliness" -> "xsd:dateTime" [ label = "Airline_Reviews_Ontology:flightDate" ];
+	"Airline_Reviews_Ontology:Identifier" -> "xsd:string" [ label = "Airline_Reviews_Ontology:idNumber" ];
+	"Airline_Reviews_Ontology:Identifier" -> "xsd:decimal" [ label = "Airline_Reviews_Ontology:overallRating" ];
+	"Airline_Reviews_Ontology:Identifier" -> "xsd:dateTime" [ label = "Airline_Reviews_Ontology:reviewDate" ];
+	"owl:Thing" -> "Airline_Reviews_Ontology:Recommendation" [ label = "Airline_Reviews_Ontology:hasRecommendation" ];
+	"Airline_Reviews_Ontology:Author" -> "xsd:string" [ label = "Airline_Reviews_Ontology:authorName" ];
+	"owl:Thing" -> "Airline_Reviews_Ontology:Amenities" [ label = "Airline_Reviews_Ontology:offersAmenities" ];
+	"owl:Thing" -> "Airline_Reviews_Ontology:FlightDetails" [ label = "Airline_Reviews_Ontology:fliesFromTo" ];
+	"Airline_Reviews_Ontology:Author" -> "Airline_Reviews_Ontology:FlightDetails" [ label = "Airline_Reviews_Ontology:hasFlightDetails" ];
+	"Airline_Reviews_Ontology:Identifier" -> "Airline_Reviews_Ontology:Author" [ label = "Airline_Reviews_Ontology:hasAuthor" ];
+	"Airline_Reviews_Ontology:AircraftDetails" -> "Airline_Reviews_Ontology:FlightDetails" [ label = "Airline_Reviews_Ontology:operatedBy" ];
+	"Airline_Reviews_Ontology:Identifier" -> "Airline_Reviews_Ontology:AircraftDetails" [ label = "Airline_Reviews_Ontology:usesAircraft" ];
+	"Airline_Reviews_Ontology:SeatDetails" -> "xsd:integer" [ label = "Airline_Reviews_Ontology:comfortRating" ];
+	"Airline_Reviews_Ontology:Identifier" -> "xsd:decimal" [ label = "Airline_Reviews_Ontology:hasCabinStaffServiceRating" ];
+	"owl:Thing" -> "Airline_Reviews_Ontology:ServiceRatings" [ label = "Airline_Reviews_Ontology:ObjectProperty" ];
+	"Airline_Reviews_Ontology:Identifier" -> "Airline_Reviews_Ontology:Ratings" [ label = "Airline_Reviews_Ontology:hasRating" ];
+
+}
