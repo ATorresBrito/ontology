@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:Verified" "base:CustomerService" "base:ReviewBody" "base:GroundServiceRating" "base:FlightDate" "base:FlightDetails" "base:ValueAssessment" "base:ServiceRatings" "base:AmenityAvailability" "base:AircraftType" "base:SeatDetails" "base:LoyaltyProgram" "base:OnTimePerformance" "base:OriginAirport" "base:SeatComfortRating" "base:OverallRating" "base:SeatType" "base:CustomerServiceRating" "base:SafetyMeasuresRating" "base:FlightTimeliness" "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating" "base:EnvironmentalInitiativesRating" "base:Identifier" "base:BaggageHandlingRating" "base:DestinationAirport" "base:CheckInProcess" "base:ReviewContent" "base:Recommendation" "base:ReviewTitle" "base:LoyaltyProgramBenefits" "base:Amenities" "base:DatePublished" "base:InflightServices" "base:Ratings" "base:Safety" "base:CabinStaffServiceRating" "base:MaxRating" "base:Author" "base:InflightEntertainmentRating" "base:TripVerified" "base:ValueForMoneyRating" "base:AircraftDetails" "base:Verification" "base:RecommendationStatus" "base:CheckInEfficiency" "base:AuthorCountry" "base:EnvironmentalConcerns" "base:AuthorName" "http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating" "base:BaggageHandling" ; /*classes style*/
+	"http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating" -> "base:ServiceRatings" [ label = "rdfs:subClassOf" ];
+	"base:SeatType" -> "base:SeatDetails" [ label = "rdfs:subClassOf" ];
+	"base:ReviewBody" -> "base:ReviewContent" [ label = "rdfs:subClassOf" ];
+	"base:SeatComfortRating" -> "base:SeatDetails" [ label = "rdfs:subClassOf" ];
+	"base:AircraftType" -> "base:AircraftDetails" [ label = "rdfs:subClassOf" ];
+	"base:BaggageHandlingRating" -> "base:BaggageHandling" [ label = "rdfs:subClassOf" ];
+	"base:GroundServiceRating" -> "base:ServiceRatings" [ label = "rdfs:subClassOf" ];
+	"base:ValueForMoneyRating" -> "base:ValueAssessment" [ label = "rdfs:subClassOf" ];
+	"base:EnvironmentalInitiativesRating" -> "base:EnvironmentalConcerns" [ label = "rdfs:subClassOf" ];
+	"base:FlightDate" -> "base:FlightDetails" [ label = "rdfs:subClassOf" ];
+	"base:CheckInEfficiency" -> "base:CheckInProcess" [ label = "rdfs:subClassOf" ];
+	"base:OnTimePerformance" -> "base:FlightTimeliness" [ label = "rdfs:subClassOf" ];
+	"http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating" -> "base:InflightServices" [ label = "rdfs:subClassOf" ];
+	"base:AuthorCountry" -> "base:Author" [ label = "rdfs:subClassOf" ];
+	"base:Verified" -> "base:Verification" [ label = "rdfs:subClassOf" ];
+	"base:TripVerified" -> "base:Verification" [ label = "rdfs:subClassOf" ];
+	"base:OriginAirport" -> "base:FlightDetails" [ label = "rdfs:subClassOf" ];
+	"base:ReviewTitle" -> "base:ReviewContent" [ label = "rdfs:subClassOf" ];
+	"base:DatePublished" -> "base:Identifier" [ label = "rdfs:subClassOf" ];
+	"base:MaxRating" -> "base:Ratings" [ label = "rdfs:subClassOf" ];
+	"base:CabinStaffServiceRating" -> "base:ServiceRatings" [ label = "rdfs:subClassOf" ];
+	"base:AmenityAvailability" -> "base:Amenities" [ label = "rdfs:subClassOf" ];
+	"base:LoyaltyProgramBenefits" -> "base:LoyaltyProgram" [ label = "rdfs:subClassOf" ];
+	"base:DestinationAirport" -> "base:FlightDetails" [ label = "rdfs:subClassOf" ];
+	"base:CustomerServiceRating" -> "base:CustomerService" [ label = "rdfs:subClassOf" ];
+	"base:InflightEntertainmentRating" -> "base:InflightServices" [ label = "rdfs:subClassOf" ];
+	"base:SafetyMeasuresRating" -> "base:Safety" [ label = "rdfs:subClassOf" ];
+	"base:RecommendationStatus" -> "base:Recommendation" [ label = "rdfs:subClassOf" ];
+	"base:OverallRating" -> "base:Ratings" [ label = "rdfs:subClassOf" ];
+	"base:AuthorName" -> "base:Author" [ label = "rdfs:subClassOf" ];
+
+}
