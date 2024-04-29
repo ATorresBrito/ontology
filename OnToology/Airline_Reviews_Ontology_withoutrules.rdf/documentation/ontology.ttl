@@ -1,0 +1,647 @@
+@prefix : <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#> .
+
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology> rdf:type owl:Ontology ;
+                                                                               rdfs:comment "This ontology is designed to structure and relate information obtained from customer reviews of Qatar Airways and Ryanair airlines, facilitating the analysis and comparison of flight services through different parameters such as comfort, cabin service, and general customer satisfaction. customer." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ObjectProperty
+:ObjectProperty rdf:type owl:ObjectProperty ;
+                rdfs:range :ServiceRatings ;
+                rdfs:comment "Links a review to the services evaluated" ;
+                rdfs:label "objectProperty" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#fliesFromTo
+:fliesFromTo rdf:type owl:ObjectProperty ;
+             rdfs:range :FlightDetails ;
+             rdfs:comment "Connects a flight review with its departure and destination airports" ;
+             rdfs:label "filesFromTo" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasAuthor
+:hasAuthor rdf:type owl:ObjectProperty ;
+           rdfs:domain :Identifier ;
+           rdfs:range :Author ;
+           rdfs:comment "Connects a flight review with its departure and destination airports" ;
+           rdfs:label "hasAuthor" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasFlightDetails
+:hasFlightDetails rdf:type owl:ObjectProperty ,
+                           owl:TransitiveProperty ;
+                  rdfs:domain :Author ;
+                  rdfs:range :FlightDetails ;
+                  rdfs:comment "Associates a review with specific flight details" ;
+                  rdfs:label "hasFlightDetails" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRating
+:hasRating rdf:type owl:ObjectProperty ;
+           rdfs:domain :Identifier ;
+           rdfs:range :Ratings ;
+           rdfs:comment "Connects a review to the ratings it includes" ;
+           rdfs:label "hasRating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendation
+:hasRecommendation rdf:type owl:ObjectProperty ;
+                   rdfs:range :Recommendation ;
+                   rdfs:comment "Relates a review to its recommendation status" ;
+                   rdfs:label "hasRecommendation" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasSeat
+:hasSeat rdf:type owl:ObjectProperty ;
+         rdfs:domain :AircraftDetails ;
+         rdfs:range :SeatDetails ;
+         rdfs:comment "Connects a review to the type of seat described in the review" ;
+         rdfs:label "hasSeat" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#offersAmenities
+:offersAmenities rdf:type owl:ObjectProperty ;
+                 rdfs:range :Amenities ;
+                 rdfs:comment "Associates a review with the amenities discussed within it" ;
+                 rdfs:label "offersAmenities" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#operatedBy
+:operatedBy rdf:type owl:ObjectProperty ,
+                     owl:TransitiveProperty ;
+            rdfs:domain :AircraftDetails ;
+            rdfs:range :FlightDetails ;
+            rdfs:comment "operate flying" ;
+            rdfs:label "operate by" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#usesAircraft
+:usesAircraft rdf:type owl:ObjectProperty ;
+              rdfs:domain :Identifier ;
+              rdfs:range :AircraftDetails ;
+              rdfs:comment "Associates a review with the aircraft used for the flight" ;
+              rdfs:label "usesAircraft" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#authorName
+:authorName rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :idNumber ;
+            rdfs:domain :Author ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The name of the author of the review" ;
+            rdfs:label "authorName" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#comfortRating
+:comfortRating rdf:type owl:DatatypeProperty ;
+               rdfs:domain :SeatDetails ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "The rating for seat comfort provided in the review" ;
+               rdfs:label "comfortRating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#flightDate
+:flightDate rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :FlightTimeliness ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "The date of the flight being reviewed" ;
+            rdfs:label "flightDate" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasCabinStaffServiceRating
+:hasCabinStaffServiceRating rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Identifier ;
+                            rdfs:range xsd:decimal ;
+                            rdfs:comment "ha scabin staf f service rating" ;
+                            rdfs:label "hasCabinStaffServiceRating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#hasRecommendationStatus
+:hasRecommendationStatus rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "recommendation status data" ;
+                         rdfs:label "hasRecommendationStatus" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#idNumber
+:idNumber rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Identifier ;
+          rdfs:range xsd:string ;
+          rdfs:comment "he number when the id was published" ;
+          rdfs:label "idNumber" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#overallRating
+:overallRating rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Identifier ;
+               rdfs:range xsd:decimal ;
+               rdfs:comment "The overall rating given in the review" ;
+               rdfs:label "overallRating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#recommendationStatus
+:recommendationStatus rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Identifier ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:comment "Indicates whether the review recommends the airline service" ;
+                      rdfs:label "recommendationStatus" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#reviewDate
+:reviewDate rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Identifier ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "he date when the id was published" ;
+            rdfs:label "idDate" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftDetails
+:AircraftDetails rdf:type owl:Class ;
+                 rdfs:comment "Details about the aircraft used for the flight, such as the type and model" ;
+                 rdfs:label "Aircraft Details" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AircraftType
+:AircraftType rdf:type owl:Class ;
+              rdfs:subClassOf :AircraftDetails ;
+              rdfs:comment "The type of aircraft used, such as Boeing 787 or Airbus A320" ;
+              rdfs:label "Aircraft Type" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Amenities
+:Amenities rdf:type owl:Class ;
+           rdfs:comment "Additional comfort and convenience features offered to passengers during the flight" ;
+           rdfs:label "Amenities" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AmenityAvailability
+:AmenityAvailability rdf:type owl:Class ;
+                     rdfs:subClassOf :Amenities ;
+                     rdfs:comment "Specifies whether specific amenities are available on the flight, such as extra legroom or in-flight meals" ;
+                     rdfs:label "Amenity Availability" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Author
+:Author rdf:type owl:Class ;
+        rdfs:comment "The person who wrote the review. Includes name and country" ;
+        rdfs:label "Author" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorCountry
+:AuthorCountry rdf:type owl:Class ;
+               rdfs:subClassOf :Author ;
+               owl:disjointWith :AuthorName ;
+               rdfs:comment "he country where the author resides or from which they wrote the review" ;
+               rdfs:label "Author Country" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#AuthorName
+:AuthorName rdf:type owl:Class ;
+            rdfs:subClassOf :Author ;
+            rdfs:comment "The name of the author of the review" ;
+            rdfs:label "Author Name" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandling
+:BaggageHandling rdf:type owl:Class ;
+                 rdfs:comment "The process and efficiency of how an airline handles passenger luggage, from check-in to collection at the destination" ;
+                 rdfs:label "Baggage Handling" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#BaggageHandlingRating
+:BaggageHandlingRating rdf:type owl:Class ;
+                       rdfs:subClassOf :BaggageHandling ;
+                       rdfs:comment "A rating that evaluates the effectiveness and care of the airline's baggage handling services" ;
+                       rdfs:label "Baggage Handling Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CabinStaffServiceRating
+:CabinStaffServiceRating rdf:type owl:Class ;
+                         rdfs:subClassOf :ServiceRatings ;
+                         rdfs:comment "A rating for the service provided by the flight's cabin crew, often out of 5 stars" ;
+                         rdfs:label "Cabin Staff Service Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInEfficiency
+:CheckInEfficiency rdf:type owl:Class ;
+                   rdfs:subClassOf :CheckInProcess ;
+                   rdfs:comment "A measure of how quickly and effectively the airline handles check-in procedures" ;
+                   rdfs:label "Check-in Efficiency" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CheckInProcess
+:CheckInProcess rdf:type owl:Class ;
+                rdfs:comment "he procedures involved in checking in for a flight at the airport, which can significantly impact passenger satisfaction" ;
+                rdfs:label "Check-in Process" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Company
+:Company rdf:type owl:Class ;
+         rdfs:comment "A business that offers air transportation for both passengers." ;
+         rdfs:label "Company" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerService
+:CustomerService rdf:type owl:Class ;
+                 rdfs:comment "Refers to the overall quality of interaction between the airline staff and the passengers, both on the ground and in-flight" ;
+                 rdfs:label "Customer Service" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#CustomerServiceRating
+:CustomerServiceRating rdf:type owl:Class ;
+                       rdfs:subClassOf :CustomerService ;
+                       rdfs:comment "A rating that assesses the quality of customer service provided by the airline" ;
+                       rdfs:label "Customer Service Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DatePublished
+:DatePublished rdf:type owl:Class ;
+               rdfs:subClassOf :Identifier ;
+               rdfs:comment "The date on which the review was published, formatted as YYYY-MM-DD" ;
+               rdfs:label "Date Published" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#DestinationAirport
+:DestinationAirport rdf:type owl:Class ;
+                    rdfs:subClassOf :FlightDetails ;
+                    rdfs:comment "The airport at which the flight arrived" ;
+                    rdfs:label "Destination Airport" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalConcerns
+:EnvironmentalConcerns rdf:type owl:Class ;
+                       rdfs:comment "Issues related to the environmental impact of airline operations, including emissions and sustainability practices" ;
+                       rdfs:label "Environmental Concerns" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EnvironmentalInitiativesRating
+:EnvironmentalInitiativesRating rdf:type owl:Class ;
+                                rdfs:subClassOf :EnvironmentalConcerns ;
+                                rdfs:comment "A rating that evaluates the airline's efforts and practices in reducing its environmental footprint" ;
+                                rdfs:label "Environmental Initiatives Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDate
+:FlightDate rdf:type owl:Class ;
+            rdfs:subClassOf :FlightDetails ;
+            rdfs:comment "The specific date on which the flight occurred" ;
+            rdfs:label "Flight Date" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightDetails
+:FlightDetails rdf:type owl:Class ;
+               rdfs:comment "Information about the flight, including the date and the airports of origin and destination" ;
+               rdfs:label "Flight Details" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#FlightTimeliness
+:FlightTimeliness rdf:type owl:Class ;
+                  rdfs:comment "Refers to the punctuality of the airline's flights, including departures and arrivals" ;
+                  rdfs:label "Flight Timeliness" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#GroundServiceRating
+:GroundServiceRating rdf:type owl:Class ;
+                     rdfs:subClassOf :ServiceRatings ;
+                     rdfs:comment "A rating for the service quality at the airport, such as check-in and baggage handling." ;
+                     rdfs:label "Ground Service Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#HighlyRecommended
+:HighlyRecommended rdf:type owl:Class ;
+                   rdfs:comment "If a flight receives an overall rating greater than 4 and a cabin service rating also greater than 4, then it is considered highly recommended" ;
+                   rdfs:label "HighlyRecommended" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Identifier
+:Identifier rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :idNumber ;
+                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange owl:rational
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :idNumber ;
+                              owl:maxQualifiedCardinality "9999"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange owl:rational
+                            ] ;
+            rdfs:comment "A unique identifier for each review, typically a numeric or alphanumeric string" ;
+            rdfs:label "Identifier" ;
+            rdfs:sameAs "https://dbpedia.org/ontology/idNumber" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightEntertainmentRating
+:InflightEntertainmentRating rdf:type owl:Class ;
+                             rdfs:subClassOf :InflightServices ;
+                             owl:disjointWith <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating> ;
+                             rdfs:comment "A rating evaluating the quality and variety of entertainment options available during the flight" ;
+                             rdfs:label "Inflight Entertainment Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#InflightServices
+:InflightServices rdf:type owl:Class ;
+                  rdfs:comment "Services provided during the flight, including entertainment and connectivity options" ;
+                  rdfs:label "Inflight Services" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LowRecomended
+:LowRecomended rdf:type owl:Class ;
+               rdfs:comment "minor than 2" ;
+               rdfs:label "LowRecomended" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgram
+:LoyaltyProgram rdf:type owl:Class ;
+                rdfs:comment "A program offered by an airline to reward passengers with benefits for frequent travel" ;
+                rdfs:label "Loyalty Program" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#LoyaltyProgramBenefits
+:LoyaltyProgramBenefits rdf:type owl:Class ;
+                        rdfs:subClassOf :LoyaltyProgram ;
+                        rdfs:comment "Specific benefits provided to members of the airline's loyalty program, such as upgrades, extra baggage allowance, or priority boarding" ;
+                        rdfs:label "Loyalty Program Benefits" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaxRating
+:MaxRating rdf:type owl:Class ;
+           rdfs:subClassOf :Ratings ;
+           owl:disjointWith :OverallRating ;
+           rdfs:comment "The maximum possible rating that can be given" ;
+           rdfs:label "Max Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MiddleRecomended
+:MiddleRecomended rdf:type owl:Class ;
+                  rdfs:comment "value between 2 and 4" ;
+                  rdfs:label "MiddleRecomended" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OnTimePerformance
+:OnTimePerformance rdf:type owl:Class ;
+                   rdfs:subClassOf :FlightTimeliness ;
+                   rdfs:comment "A rating that measures how often the airline's flights operate on schedule" ;
+                   rdfs:label "On-time Performance" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OriginAirport
+:OriginAirport rdf:type owl:Class ;
+               rdfs:subClassOf :FlightDetails ;
+               rdfs:comment "The airport from which the flight departed" ;
+               rdfs:label "Origin Airport" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#OverallRating
+:OverallRating rdf:type owl:Class ;
+               rdfs:subClassOf :Ratings ;
+               rdfs:comment "A general rating given by the reviewer to the airline" ;
+               rdfs:label "Overall Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ratings
+:Ratings rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :overallRating ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange owl:rational
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :overallRating ;
+                           owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange owl:rational
+                         ] ;
+         rdfs:comment "Contains all ratings associated with the review, including overall, service, and specific amenities" ;
+         rdfs:label "Ratings" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Recommendation
+:Recommendation rdf:type owl:Class ;
+                rdfs:comment "Indicates whether the review author recommends the airline service to other potential customers" ;
+                rdfs:label "Recommendation" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#RecommendationStatus
+:RecommendationStatus rdf:type owl:Class ;
+                      rdfs:subClassOf :Recommendation ;
+                      rdfs:comment "A boolean value indicating if the airline is recommended by the reviewer" ;
+                      rdfs:label "Recommendation Status" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewBody
+:ReviewBody rdf:type owl:Class ;
+            rdfs:subClassOf :ReviewContent ;
+            owl:disjointWith :ReviewTitle ;
+            rdfs:comment "The main textual content of the review" ;
+            rdfs:label "Review Body" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewContent
+:ReviewContent rdf:type owl:Class ;
+               rdfs:comment "Contains the main textual content of the review, including the title and body" ;
+               rdfs:label "Review Content" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ReviewTitle
+:ReviewTitle rdf:type owl:Class ;
+             rdfs:subClassOf :ReviewContent ;
+             rdfs:comment "The title of the review" ;
+             rdfs:label "Review Title" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Safety
+:Safety rdf:type owl:Class ;
+        rdfs:comment "Aspects of airline operations that concern the safety and security of passengers and crew during flights" ;
+        rdfs:label "Safety" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SafetyMeasuresRating
+:SafetyMeasuresRating rdf:type owl:Class ;
+                      rdfs:subClassOf :Safety ;
+                      rdfs:comment "A rating that assesses the effectiveness of the safety measures and protocols implemented by the airline" ;
+                      rdfs:label "Safety Measures Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatComfortRating
+:SeatComfortRating rdf:type owl:Class ;
+                   rdfs:subClassOf :SeatDetails ;
+                   owl:disjointWith :SeatType ;
+                   rdfs:comment "A rating of the comfort of the seat" ;
+                   rdfs:label "Seat Comfort Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatDetails
+:SeatDetails rdf:type owl:Class ;
+             rdfs:comment "Details about the seating on the flight, including type and comfort rating" ;
+             rdfs:label "Seat Details" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#SeatType
+:SeatType rdf:type owl:Class ;
+          rdfs:subClassOf :SeatDetails ;
+          rdfs:comment "The type of seat chosen on the flight" ;
+          rdfs:label "Seat Type" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ServiceRatings
+:ServiceRatings rdf:type owl:Class ;
+                rdfs:comment "Ratings related to specific services provided during the flight, including cabin staff and ground service" ;
+                rdfs:label "Service Ratings" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#TripVerified
+:TripVerified rdf:type owl:Class ;
+              rdfs:subClassOf :Verification ;
+              owl:disjointWith :Verified ;
+              rdfs:comment "Indicates whether the travel review has been verified by the airline or a third party as a genuine experience" ;
+              rdfs:label "Trip Verified" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueAssessment
+:ValueAssessment rdf:type owl:Class ;
+                 rdfs:comment "Assesses the value for money of the flight experience" ;
+                 rdfs:label "Value Assessment" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ValueForMoneyRating
+:ValueForMoneyRating rdf:type owl:Class ;
+                     rdfs:subClassOf :ValueAssessment ;
+                     rdfs:comment "Rating that evaluates the overall value for money of the flight" ;
+                     rdfs:label "Value For Money Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verification
+:Verification rdf:type owl:Class ;
+              rdfs:comment "Indicates the verification status of the review, determining if it reflects a verified travel experience" ;
+              rdfs:label "Verification" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Verified
+:Verified rdf:type owl:Class ;
+          rdfs:subClassOf :Verification ;
+          rdfs:comment "A status that shows whether the review has been authenticated as coming from an actual passenger" ;
+          rdfs:label "Verified" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf :ServiceRatings ;
+                                                                                                   rdfs:comment "A rating for the quality of food and beverages offered during the flight" ;
+                                                                                                   rdfs:label "Food & Beverages Rating" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Wifi&ConnectivityRating> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf :InflightServices ;
+                                                                                                      rdfs:comment "A rating assessing the availability and quality of WiFi and other connectivity services on board" ;
+                                                                                                      rdfs:label "Wifi & Connectivity Rating" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Boing737_900
+:Boing737_900 rdf:type owl:NamedIndividual ,
+                       :AircraftDetails ;
+              :usesAircraft :Boing737_900 ;
+              rdfs:comment "This instance represents the Boeing 737 Dreamliner, a long-haul, mid-size widebody, twin-engine jet airliner. Known for its fuel efficiency and advanced technology, it is designed to provide airlines with better efficiency and passengers with a more comfortable flying experience. It features innovations such as electrical flight systems, composite materials, and larger windows" ;
+              rdfs:label "Boing737_900" ;
+              rdfs:sameAs "https://dbpedia.org/page/Boeing_737_Next_Generation" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#EconomyClass
+:EconomyClass rdf:type owl:NamedIndividual ,
+                       :SeatDetails ;
+              :hasSeat :EconomyClass ;
+              rdfs:comment "Economy class individual" ;
+              rdfs:label "Economy Class" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#ID5235
+:ID5235 rdf:type owl:NamedIndividual ,
+                 :Identifier ;
+        :hasAuthor :MaryLe ;
+        :idNumber "ID5235" ;
+        rdfs:comment "ID5283 is the unique identifier used in the database to locate user reviews" ;
+        rdfs:label "ID5235" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#MaryLe
+:MaryLe rdf:type owl:NamedIndividual ,
+                 :Author ;
+        :hasFlightDetails :Boing737_900 ;
+        rdfs:comment "A frequent Economy Class traveler flying from Tokyo to London Heathrow via Doha." ;
+        rdfs:label "Mary Le" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Qatar_Airways
+:Qatar_Airways rdf:type owl:NamedIndividual ,
+                        :Company ;
+               rdfs:comment "Qatar Airways is the national airline of the State of Qatar and one of the leading airlines in the world, known for its high levels of service excellence. Here are some key points about Qatar Airways:" ;
+               rdfs:label "Qatar Airways" ;
+               rdfs:sameAs "http://dbpedia.org/resource/Qatar_Airways" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Ryanair
+:Ryanair rdf:type owl:NamedIndividual ,
+                  :Company ;
+         rdfs:comment "Ryanair company" ;
+         rdfs:label "Ryanair" ;
+         rdfs:sameAs "https://dbpedia.org/page/Ryanair" .
+
+
+###  http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0
+<http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0> rdf:type owl:NamedIndividual ,
+                                                                                           :Ratings ;
+                                                                                  :hasRating <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#1.0> ;
+                                                                                  rdfs:comment "Value of rating by author" ;
+                                                                                  rdfs:label 1.0 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CabinStaffServiceRating
+                :GroundServiceRating
+                <http://www.semanticweb.org/prosy/ontologies/2024/3/Airline_Reviews_Ontology#Food&BeveragesRating>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DestinationAirport
+                :FlightDate
+                :OriginAirport
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
